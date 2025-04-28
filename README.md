@@ -41,13 +41,9 @@ Create a `.env` file in your project folder with this content:
 
 ```env
 OPENAI_API_KEY="your-openai-api-key-here"
-LANGCHAIN_API_KEY="your-langchain-api-key-here"
-LANGCHAIN_PROJECT="GenAIAPP" 
 ```
 
 - Replace `your-openai-api-key-here` with your actual OpenAI key.
-- Replace `your-langchain-api-key-here` with your actual LANGCHAIN key.
-- The client (`mcp_client.py`) reads your key automatically using `python-dotenv`.
 
 ## 3. Install Dependencies
 ### Virtual environemnt 
@@ -57,26 +53,16 @@ conda create -p venv python==3.10 -y
 conda activate venv
 ```
 
-Install all required Python libraries using:
+### Requirements file
+`requirements.txt`. Install all required Python libraries using:
 ```bash
 pip install -r requirements.txt
 ```
-### Requirements file
-`requirements.txt` contents: \
-fastapi \
-uvicorn \
-requests \
-langchain \
-langgraph \
-tiktoken \
-python-dotenv  \
-langchain-openai  \
-langchain-core
 
 ## 4. Start the MCP Server
 Run the server in one terminal window:
 ```bash
-uvicorn mcp_server:app --reload
+uvicorn mcp_server:app --reload --port 8000
 ```
 Server runs at: http://localhost:8000
 
@@ -86,24 +72,32 @@ In a second terminal window, run the chat client:
 python mcp_client.py
 ```
 
-You can now chat with Adam interactively!
+To manage tokens, run
+```bash
+python mcp_client_tokenMgmt.py
+```
+Section "Tokenizer" is the modification to manage the tokens and than in the Assemble Prompt Node.
+
+You can now chat with **Adam** interactively!
 
 ## Sample Interaction (5+ Turns)
+`NPCdialogueResponse.txt`contains sample interations
 ```text
-You: Hello Adam, who are you?
-Adam: Greetings, traveler. I am Adam, a sage of the northern isles, here to share wisdom and stories with those who seek.
 
-You: What are the different genres in gaming?
-Adam: (fetches info from Wikipedia and responds)
+Player: hello Adam
+Adam: Greetings, young one. How may I be of service to you today?
 
-You: Tell me a story from the ancient times.
-Adam: Long ago, in lands beyond the known seas...
+Player: Tell me about the northern isles.
+Adam: Ah, the northern isles are a place of immense beauty and mystery. The ancient lore of the land is rich with wisdom passed down through generations. The people of the northern isles are strong and resilient, shaped by the harsh yet captivating landscape that surrounds them. From the rugged cliffs overlooking the icy seas to the lush green valleys dotted with ancient ruins, the northern isles hold a certain mystique that has captivated the hearts of many throughout history. It is a land of contrasts, where the elements themselves seem to come alive in a dance of power and grace. It is a place where the veil between the mundane world and the realm of magic is thin, and those who journey there often find themselves forever changed.
 
-You: Who was the first king of the northern isles?
-Adam: (fetches info if available, otherwise improvises)
+Player: What are the different genres in gaming?
+Adam: Ah, the world of gaming is vast and diverse, young one. There are many different genres that cater to a wide range of tastes and preferences. Some popular genres include action, adventure, role-playing, strategy, simulation, and more. Each genre offers unique gameplay experiences and challenges for players to enjoy. It is truly a realm where one can explore new worlds, face towering foes, and embark on epic quests unlike any other. Tell me, which gaming genre interests you the most?
 
-You: Thank you, Adam.
-Adam: May your journey be guided by the stars. Farewell for now.
+Player:  I feel lost.
+Adam: It is not uncommon to feel lost at times, my dear friend. Life can be overwhelming and confusing, but remember that you are never truly alone. Take a deep breath and center yourself in this moment. Reflect on what truly matters to you and what brings you joy and fulfillment. Sometimes, simply taking a step back and gaining a new perspective can help you find your way. Trust in yourself and your inner wisdom, for you have the strength and resilience to navigate through any challenges that come your way. And remember, even in the darkest of times, there is always a glimmer of hope and light waiting to guide you on your path.
+
+Player: Thank you, Adam.
+Adam: You are most welcome, my friend. Remember, I am always here to offer guidance and support whenever you need it. May you find peace and clarity on your journey ahead.
 ```
 
 ### Features
@@ -114,7 +108,7 @@ Adam: May your journey be guided by the stars. Farewell for now.
   - Perform factual lookups using Wikipedia API
 
 - LangGraph Dialogue Flow
-  - Input ➡️ Context Check ➡️ Tool Call (if needed) ➡️ Prompt Assembly ➡️ LLM Response ➡️ Output
+  - Input $\rightarrow$ Context Check $\rightarrow$ Tool Call (if needed) $\rightarrow$ Prompt Assembly $\rightarrow$ LLM Response $\rightarrow$ Output
 
 - Token Management
   - Ensures total conversation fits within 4K token limits
