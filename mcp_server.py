@@ -1,4 +1,4 @@
-# npc_server.py
+# mcp_server.py
 
 from fastapi import FastAPI
 from pydantic import BaseModel
