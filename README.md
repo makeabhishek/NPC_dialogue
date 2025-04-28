@@ -62,15 +62,15 @@ Install all required Python libraries using:
 pip install -r requirements.txt
 ```
 ### Requirements file
-`requirements.txt` contents:
-fastapi
-uvicorn
-requests
-langchain
-langgraph
-tiktoken
-python-dotenv
-langchain-openai
+`requirements.txt` contents: \
+fastapi \
+uvicorn \
+requests \
+langchain \
+langgraph \
+tiktoken \
+python-dotenv  \
+langchain-openai  \
 langchain-core
 
 ## 4. Start the MCP Server
