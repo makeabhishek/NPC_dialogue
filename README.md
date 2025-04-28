@@ -21,7 +21,7 @@ Adam is a centuries-old, wise sage from the northern isles who speaks with empat
 ---
 
 ## Project Structure
-/NPC_dialogue_project/ 
+/NPC_dialogue_project/ \
 ├── mcp_server.py     # MCP Server - handles context, memory, and tool use \
 ├── mcp_client.py     # MCP Client - chat interface with LangGraph workflow  \
 ├── .env              # Secret API keys  \
