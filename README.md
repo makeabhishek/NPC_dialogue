@@ -2,7 +2,19 @@
 
 ## Adam the Sage — NPC Dialogue System
 
-This project builds a dialogue engine for an NPC (Non-Player Character) named **Adam** using a custom **Model Context Protocol (MCP)**, LangGraph for dialogue routing, and GPT-based conversations.
+#### Overview
+This project develops a context-aware dialogue engine for a Role-Playing Game (RPG) NPC (Non-Player Character) named **Adam**, using a custom **Model Context Protocol (MCP)**, LangGraph for dialogue routing, and GPT-based conversations. It integrates three core components:
+
+- __Model Context Protocol (MCP):__
+A custom server that manages conversation memory, handles summarization, and provides context-aware responses within token limits.
+
+- __LangGraph Orchestration:__
+A state-based workflow that routes dialogue steps, including context retrieval, tool usage, prompt assembly, and LLM invocation.
+
+- __GPT-3.5-Turbo:__
+Powers Adam's conversational abilities, generating responses based on player input, context history, and factual lookups.
+
+Adam serves as an NPC (Non-Player Character) who interacts intelligently with players, remembers previous conversations, and leverages external tools (like Wikipedia search) when necessary.
 
 Adam is a centuries-old, wise sage from the northern isles who speaks with empathy and shares ancient lore.
 
