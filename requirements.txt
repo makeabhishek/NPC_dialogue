@@ -1,0 +1,24 @@
+# Core libraries
+fastapi # Web framework for building APIs
+uvicorn # ASGI server for FastAPI
+requests # To make HTTP requests
+
+# Token management
+tiktoken # Token counting for GPT models
+
+# LangGraph and LangChain
+langchain # Build LLM applications
+langgraph # Graph-based orchestration for LLM workflows
+langchain-openai # OpenAI models integration with LangChain
+langchain-core # Core utilities for LangChain
+#  langchain_community # Community-contributed LangChain modules
+
+# OpenAI API
+openai
+
+# Optional: for environment variable loading
+python-dotenv # Load environment variables
+ipykernel # Jupyter kernel support
+pypdf # Library to read, split and merge PDF files
+bs4 # BeautifulSoup: HTML and XML parser
+arxiv # Access research papers from arXiv
