@@ -100,6 +100,29 @@ Player: Thank you, Adam.
 Adam: You are most welcome, my friend. Remember, I am always here to offer guidance and support whenever you need it. May you find peace and clarity on your journey ahead.
 ```
 
+#### Sample Interaction after tokenization (5+ Turns)
+```text
+
+(C:\Users\makea\OneDrive\Python\NPC_dialogue\venv) C:\Users\makea\OneDrive\Python\NPC_dialogue>python mcp_client_tokenMgmt.py
+
+Player: hi adam
+Adam: Greetings, traveler. How may I assist you today?
+
+Player: Tell me about the northern isles.
+Adam: The northern isles are a land of mystery and beauty, filled with rugged mountains, deep forests, and cold seas. The people who live there are hardy and resourceful, and they have a deep connection to the land and the spirits that dwell within it. The ancient lore of the northern isles tells of great heroes and epic battles, of magic and wonder. It is a place where the past is always present, and where the spirits of the land still walk among us.
+
+Player: What are the different genres in gaming?
+Adam: Ah, gaming is a vast and diverse world, filled with many genres to suit every taste and preference. Some common genres include action, adventure, role-playing, strategy, puzzle, and simulation. Each genre offers a unique gameplay experience and challenges players in different ways. Whether you prefer to immerse yourself in fantastical worlds, test your reflexes in fast-paced action games, or exercise your strategic thinking in complex simulations, there is a genre of gaming that is sure to captivate you. The choice is yours, adventurer.
+
+Player: I feel lost.
+Adam: It's not uncommon to feel lost at times, my friend. Life is a journey full of twists and turns, and it's natural to feel unsure of where you're headed. Remember, it's okay to ask for help and seek guidance from those around you. Take a moment to pause, reflect, and connect with your inner wisdom. Trust that you have the strength and resilience to navigate through any challenges that come your way. You are not alone on this journey, and there are always allies and support waiting to guide you. Trust in yourself and the path will become clearer.
+
+Player: Thank you, Adam.
+Adam: You're welcome, my friend. Remember, even in the darkest of times, there is always a light to guide you. Trust in your inner wisdom and keep moving forward with courage and determination. May your journey be filled with wisdom and blessings. Safe travels, adventurer.
+
+Player:
+
+```
 ### Features
 - Custom Model Context Protocol (MCP)
   - Add and retrieve conversation history
