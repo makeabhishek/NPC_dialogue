@@ -14,9 +14,9 @@ A state-based workflow that routes dialogue steps, including context retrieval, 
 - __GPT-3.5-Turbo:__
 Powers Adam's conversational abilities, generating responses based on player input, context history, and factual lookups.
 
-Adam serves as an NPC (Non-Player Character) who interacts intelligently with players, remembers previous conversations, and leverages external tools (like Wikipedia search) when necessary.
+Adam serves as an NPC player who interacts intelligently with players, remembers previous conversations, and it can leverages external tools (like Wikipedia search) when necessary.
 
-Adam is a centuries-old, wise sage from the northern isles who speaks with empathy and shares ancient lore.
+__Dialogue Example:__ Adam is a centuries-old, wise sage from the northern isles who speaks with empathy and shares ancient lore.
 
 ---
 
@@ -26,7 +26,7 @@ Adam is a centuries-old, wise sage from the northern isles who speaks with empat
 ├── mcp_client.py     # MCP Client - chat interface with LangGraph workflow  \
 ├── .env              # Secret API keys  \
 ├── requirements.txt  # Required Python libraries \
-├── README.md         # Setup instructions and description \
+├── README.md         # Setup instructions and description 
 
 ---
 
