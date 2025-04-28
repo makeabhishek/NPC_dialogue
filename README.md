@@ -21,7 +21,12 @@ Adam is a centuries-old, wise sage from the northern isles who speaks with empat
 ---
 
 ## Project Structure
-/your_project/ ├── mcp_server.py # MCP Server - handles context, memory, and tool use ├── mcp_client.py # MCP Client - chat interface with LangGraph workflow ├── .env # Secret API keys ├── requirements.txt # Required Python libraries ├── README.md # Setup instructions and description
+/NPC_dialogue_project/ 
+├── mcp_server.py     # MCP Server - handles context, memory, and tool use 
+├── mcp_client.py     # MCP Client - chat interface with LangGraph workflow 
+├── .env              # Secret API keys 
+├── requirements.txt  # Required Python libraries 
+├── README.md         # Setup instructions and description
 
 ---
 
@@ -100,7 +105,6 @@ Adam: (fetches info if available, otherwise improvises)
 You: Thank you, Adam.
 Adam: May your journey be guided by the stars. Farewell for now.
 ```
-
 
 ### Features
 - Custom Model Context Protocol (MCP)
